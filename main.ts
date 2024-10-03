@@ -1,22 +1,25 @@
-// Setze die RGB-LED zu Beginn auf Gelb, um Bereitschaft zu signalisieren
+// Definiere einen Event-Handler für Button A
 input.onButtonPressed(Button.A, function () {
-    Feuchtigkeit = pins.analogReadPin(AnalogPin.P1)
-    if (Feuchtigkeit <= 8) {
-        // Blau bei Feuchtigkeit <= 8
-        basic.setLedColor(0x0000ff)
-    } else if (Feuchtigkeit > 400) {
-        // Rot bei Feuchtigkeit > 400
-        basic.setLedColor(0xff0000)
+    // Messe den analogen Wert am Port P1
+    feuchtigkeit = pins.analogReadPin(AnalogPin.P1)
+    // Entscheide basierend auf dem Feuchtigkeitswert, welche Farbe die LED haben soll
+    if (feuchtigkeit <= 8) {
+        // Blau
+        basic.setLedColor(0x0000FF)
+    } else if (feuchtigkeit > 400) {
+        // Rot
+        basic.setLedColor(0xFF0000)
     } else {
-        // Grün bei Feuchtigkeit zwischen 9 und 400
-        basic.setLedColor(0x00ff00)
+        // Grün
+        basic.setLedColor(0x00FF00)
     }
     // Zeige den Feuchtigkeitswert auf dem Display
-    basic.showNumber(Feuchtigkeit)
+    basic.showNumber(feuchtigkeit)
+    // Warte 2 Sekunden
     basic.pause(2000)
-    // Setze die RGB-LED nach 2 Sekunden wieder auf Gelb
-    basic.setLedColor(0xffff00)
+    // Setze die LED wieder auf Gelb
+    basic.setLedColor(0xFFFF00)
 })
-let Feuchtigkeit = 0
-// Setze die RGB-LED zu Beginn auf Gelb, um Bereitschaft zu signalisieren
-basic.setLedColor(0xffff00)
+let feuchtigkeit = 0
+// Setze die LED zu Beginn auf Gelb
+basic.setLedColor(0xFFFF00)

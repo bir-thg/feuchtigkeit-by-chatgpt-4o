@@ -1,5 +1,5 @@
 {
-    "name": "feuchtigkeit by chatgpt 4o",
+    "name": "feuchtigkeit by chatgpt4 (old chatgpt)",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -20,5 +20,5 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
