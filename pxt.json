@@ -1,14 +1,15 @@
 {
-    "name": "feuchtigkeit by chatgpt4 (old chatgpt)",
+    "name": "feuchtigkeit mit beiden buttons und funktionen",
     "description": "",
     "dependencies": {
         "core": "*",
-        "v2": "*"
+        "v1": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
